@@ -127,7 +127,7 @@ Cursor cursor = managedQuery(
 
 ## 二、添加笔记查询功能
 
-### 1.在menu菜单中添加一个searchview
+#### 1.在menu菜单中添加一个searchview
 ```XML
 <!--  search  -->
     <item android:id="@+id/menu_search"
@@ -135,13 +135,13 @@ Cursor cursor = managedQuery(
         android:actionViewClass="android.widget.SearchView"
         android:showAsAction="always" />
 ```
-### 2.在契约类NotePad中添加查询的条件语句
+#### 2.在契约类NotePad中添加查询的条件语句
 ```java
 //按标题查询
         public static final String SELECT_BY_TITLE = COLUMN_NAME_TITLE + " like ?";
 ```
 
-### 3.在初始化菜单的时候进行配置,添加搜索事件监听
+#### 3.在初始化菜单的时候进行配置,添加搜索事件监听
 ```java
 SearchView searchView = (SearchView) menu.findItem(R.id.menu_search).getActionView();
         //设置搜索文本监听
